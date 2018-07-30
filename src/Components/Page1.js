@@ -1,12 +1,12 @@
 import React from 'react';
 import logo from '../logo.svg';
+import Header from './Header';
+
+const pageName = "Page 1";
 
 const Page1 = ({ onRouteChange }) =>
   <div className="App">
-    <header className="App-header">
-      <img src={logo} className="App-logo" alt="logo" />
-      <h1 className="App-title">Welcome to Page 1</h1>
-    </header>
+    <Header pageName={pageName} />
     <button className='disabled'>Page1</button>
     <button onClick={() => onRouteChange('page2')}>Page2</button>
     <button onClick={() => onRouteChange('page3')}>Page3</button>
