@@ -3,6 +3,7 @@ import './App.css';
 import Loadable from 'react-loadable';
 
 import Page1 from './Components/Page1';
+import AppHeader from './Components/AppHeader';
 
 class App extends Component {
   constructor() {
@@ -28,14 +29,29 @@ class App extends Component {
         return <div>Loading...</div>
       }
     });
-    // Part 1 - No code splitting
 
+    // Part 1 - No code splitting
     if (this.state.route === 'page1') {//Page1
-      return <Page1 onRouteChange={this.onRouteChange} />
+      return(
+        <div>
+          <AppHeader />
+          <Page1 onRouteChange={this.onRouteChange} />           
+        </div>
+      ); 
     } else if (this.state.route === 'page2') {
-      return <Page2 onRouteChange={this.onRouteChange}/>;
+      return(
+        <div>
+          <AppHeader />
+          <Page2 onRouteChange={this.onRouteChange} />           
+        </div>
+      ); 
     } else {
-      return <Page3 onRouteChange={this.onRouteChange}/>;
+      return(
+        <div>
+          <AppHeader />
+          <Page3 onRouteChange={this.onRouteChange} />           
+        </div>
+      );
     }
   }
 }

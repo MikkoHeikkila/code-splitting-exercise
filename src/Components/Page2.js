@@ -1,10 +1,12 @@
 import React from 'react';
-import logo from '../logo.svg';
 import Header from './Header';
+
+console.log("Page 2");
 
 const pageName = "Page 2";
 
 const Page2 = ({ onRouteChange }) =>
+
   <div className="App">
     <Header pageName={pageName} />
     <button onClick={() => onRouteChange('page1')}>Page1</button>

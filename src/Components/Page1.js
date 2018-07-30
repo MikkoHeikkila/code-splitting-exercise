@@ -1,10 +1,12 @@
 import React from 'react';
-import logo from '../logo.svg';
 import Header from './Header';
+
+console.log("Page 1");
 
 const pageName = "Page 1";
 
 const Page1 = ({ onRouteChange }) =>
+
   <div className="App">
     <Header pageName={pageName} />
     <button className='disabled'>Page1</button>
